@@ -40,12 +40,12 @@
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		61EAF594320649F2AF9101DB /* Pods-LVSwiftKitModule_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LVSwiftKitModule_Tests.release.xcconfig"; path = "Target Support Files/Pods-LVSwiftKitModule_Tests/Pods-LVSwiftKitModule_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		6BF01F8C3B2354310E1E7412 /* Pods-LVSwiftKitModule_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LVSwiftKitModule_Example.debug.xcconfig"; path = "Target Support Files/Pods-LVSwiftKitModule_Example/Pods-LVSwiftKitModule_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		762E006A16E81758ABE1054E /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		762E006A16E81758ABE1054E /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		B390B0CCD4F0DA914D697AB5 /* Pods_LVSwiftKitModule_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LVSwiftKitModule_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDA2E15C070B061F0533F3FA /* Pods_LVSwiftKitModule_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LVSwiftKitModule_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D11F5F7C6E89909FE93226FB /* Pods-LVSwiftKitModule_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LVSwiftKitModule_Tests.debug.xcconfig"; path = "Target Support Files/Pods-LVSwiftKitModule_Tests/Pods-LVSwiftKitModule_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		D8BC5E099730034F813E851E /* LVSwiftKitModule.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = LVSwiftKitModule.podspec; path = ../LVSwiftKitModule.podspec; sourceTree = "<group>"; };
-		D98A10BB6994739E33919913 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		D8BC5E099730034F813E851E /* LVSwiftKitModule.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LVSwiftKitModule.podspec; path = ../LVSwiftKitModule.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		D98A10BB6994739E33919913 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		DE8CD329CC0276709AC1B445 /* Pods-LVSwiftKitModule_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LVSwiftKitModule_Example.release.xcconfig"; path = "Target Support Files/Pods-LVSwiftKitModule_Example/Pods-LVSwiftKitModule_Example.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -147,7 +147,6 @@
 				D11F5F7C6E89909FE93226FB /* Pods-LVSwiftKitModule_Tests.debug.xcconfig */,
 				61EAF594320649F2AF9101DB /* Pods-LVSwiftKitModule_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -190,6 +189,7 @@
 				607FACE11AFB9204008FA782 /* Sources */,
 				607FACE21AFB9204008FA782 /* Frameworks */,
 				607FACE31AFB9204008FA782 /* Resources */,
+				BBC9CB822C10D7C470E86456 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -227,6 +227,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -304,6 +305,26 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BBC9CB822C10D7C470E86456 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LVSwiftKitModule_Tests/Pods-LVSwiftKitModule_Tests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LVSwiftKitModule_Tests/Pods-LVSwiftKitModule_Tests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FEE63E8E5506F771621D76E6 /* [CP] Embed Pods Frameworks */ = {

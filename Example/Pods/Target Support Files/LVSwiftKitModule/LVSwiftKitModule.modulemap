@@ -1,0 +1,6 @@
+framework module LVSwiftKitModule {
+  umbrella header "LVSwiftKitModule-umbrella.h"
+
+  export *
+  module * { export * }
+}
