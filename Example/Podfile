@@ -1,0 +1,13 @@
+use_frameworks!
+
+platform :ios, '10.0'
+
+target 'LVSwiftKitModule_Example' do
+  pod 'LVSwiftKitModule', :path => '../'
+
+  target 'LVSwiftKitModule_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
